@@ -88,9 +88,5 @@ La evidencia completa está en la carpeta `tests/evidencias/`.
 
 ## Bibliografía
 
-- Cohn, M. (2004). *User stories applied: For agile software development*. Addison-Wesley.
-- Evans, E. (2003). *Domain-driven design: Tackling complexity in the heart of software*. Addison-Wesley.
-- Fowler, M. (2003). *Patterns of enterprise application architecture*. Addison-Wesley.
-- Martin, R. C. (2017). *Clean architecture: A craftsman's guide to software structure and design*. Prentice Hall.
-- Beck, K. (2003). *Test-driven development: By example*. Addison-Wesley.
-- Millett, S., & Tune, N. (2015). *Patterns, principles, and practices of domain-driven design*. Wrox.
+- Notas de clase.
+
