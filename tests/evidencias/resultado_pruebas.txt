@@ -1,0 +1,87 @@
+test_flujo_normal_crea_la_cita_y_registra_el_evento (tests.test_casos_de_uso.TestCU01SolicitarCita.test_flujo_normal_crea_la_cita_y_registra_el_evento) ... ok
+test_horario_traslapado_revierte_y_no_crea_la_cita (tests.test_casos_de_uso.TestCU01SolicitarCita.test_horario_traslapado_revierte_y_no_crea_la_cita) ... ok
+test_mascota_no_registrada_revierte (tests.test_casos_de_uso.TestCU01SolicitarCita.test_mascota_no_registrada_revierte)
+R-10: no se cita a una mascota que no está registrada. ... ok
+test_expediente_no_encontrado_revierte (tests.test_casos_de_uso.TestCU02GenerarNotaClinica.test_expediente_no_encontrado_revierte) ... ok
+test_flujo_normal_agrega_la_nota_con_el_veterinario_como_autor (tests.test_casos_de_uso.TestCU02GenerarNotaClinica.test_flujo_normal_agrega_la_nota_con_el_veterinario_como_autor) ... ok
+test_con_esquema_validado_devuelve_la_proxima_aplicacion (tests.test_casos_de_uso.TestCU03RegistrarVacunacion.test_con_esquema_validado_devuelve_la_proxima_aplicacion) ... ok
+test_esquema_no_validado_confirma_el_registro_y_deja_seguimiento_pendiente (tests.test_casos_de_uso.TestCU03RegistrarVacunacion.test_esquema_no_validado_confirma_el_registro_y_deja_seguimiento_pendiente)
+ADR-05: EsquemaNoValidado NO es un error ni revierte el registro. ... ok
+test_historial_conserva_aplicaciones_previas (tests.test_casos_de_uso.TestCU03RegistrarVacunacion.test_historial_conserva_aplicaciones_previas)
+NB-14, R-11: registrar una vacuna nueva no borra las anteriores. ... ok
+test_mascota_no_registrada_revierte (tests.test_casos_de_uso.TestCU03RegistrarVacunacion.test_mascota_no_registrada_revierte) ... ok
+test_vacuna_sin_esquema_definido_tambien_queda_registrada (tests.test_casos_de_uso.TestCU03RegistrarVacunacion.test_vacuna_sin_esquema_definido_tambien_queda_registrada) ... ok
+test_ingreso_sin_motivo_se_rechaza_y_revierte (tests.test_casos_de_uso.TestCU04RegistrarHospitalizacion.test_ingreso_sin_motivo_se_rechaza_y_revierte) ... ok
+test_mascota_no_registrada_revierte (tests.test_casos_de_uso.TestCU04RegistrarHospitalizacion.test_mascota_no_registrada_revierte) ... ok
+test_registrar_hospitalizacion_inicia_seguimiento (tests.test_casos_de_uso.TestCU04RegistrarHospitalizacion.test_registrar_hospitalizacion_inicia_seguimiento)
+NB-18, R-08: el seguimiento continuo comienza desde el ingreso. ... ok
+test_el_servicio_de_emergencias_no_depende_de_citas (tests.test_casos_de_uso.TestCU05AtenderEmergencia.test_el_servicio_de_emergencias_no_depende_de_citas) ... ok
+test_emergencia_con_mascota_registrada_la_conserva (tests.test_casos_de_uso.TestCU05AtenderEmergencia.test_emergencia_con_mascota_registrada_la_conserva) ... ok
+test_emergencia_sin_cita_se_registra (tests.test_casos_de_uso.TestCU05AtenderEmergencia.test_emergencia_sin_cita_se_registra)
+NB-19, R-06: se atiende sin cita previa y sin mascota registrada (P3). ... ok
+test_cada_repository_tiene_su_implementacion (tests.test_coherencia_diseno.TestComponentesDelDiagramaDeClases.test_cada_repository_tiene_su_implementacion) ... ok
+test_componentes_del_diagrama_existen (tests.test_coherencia_diseno.TestComponentesDelDiagramaDeClases.test_componentes_del_diagrama_existen) ... ok
+test_los_servicios_son_uno_por_caso_de_uso (tests.test_coherencia_diseno.TestComponentesDelDiagramaDeClases.test_los_servicios_son_uno_por_caso_de_uso) ... ok
+test_servicios_dependen_de_interfaces_no_de_implementaciones (tests.test_coherencia_diseno.TestComponentesDelDiagramaDeClases.test_servicios_dependen_de_interfaces_no_de_implementaciones) ... ok
+test_todos_los_modulos_del_paquete_se_importan (tests.test_coherencia_diseno.TestComponentesDelDiagramaDeClases.test_todos_los_modulos_del_paquete_se_importan) ... ok
+test_arquitectura_dependencias (tests.test_coherencia_diseno.TestReglaDeDependenciasEntreCapas.test_arquitectura_dependencias)
+El dominio no depende de aplicación ni infraestructura; la aplicación ... ok
+test_dominio_solo_usa_biblioteca_estandar (tests.test_coherencia_diseno.TestReglaDeDependenciasEntreCapas.test_dominio_solo_usa_biblioteca_estandar)
+El dominio queda libre de frameworks y de tecnología de persistencia. ... ok
+test_consultar_citas_no_modifica_estado (tests.test_consultas_cqrs.TestConsultarCitasProgramadas.test_consultar_citas_no_modifica_estado)
+US07: la consulta no escribe, no abre transacción y no devuelve agregados. ... ok
+test_el_handler_de_consultas_no_depende_de_repositorios_ni_unit_of_work (tests.test_consultas_cqrs.TestConsultarCitasProgramadas.test_el_handler_de_consultas_no_depende_de_repositorios_ni_unit_of_work) ... ok
+test_la_vista_une_la_cita_con_el_nombre_de_la_mascota_ordenada_por_hora (tests.test_consultas_cqrs.TestConsultarCitasProgramadas.test_la_vista_une_la_cita_con_el_nombre_de_la_mascota_ordenada_por_hora) ... ok
+test_consulta_expediente_solo_autorizados (tests.test_consultas_cqrs.TestConsultarExpedienteClinico.test_consulta_expediente_solo_autorizados)
+NB-11, R-14: la información clínica es solo para personal autorizado. ... ok
+test_consultar_el_expediente_no_modifica_el_estado (tests.test_consultas_cqrs.TestConsultarExpedienteClinico.test_consultar_el_expediente_no_modifica_el_estado) ... ok
+test_la_vista_expone_autor_y_fecha_sin_reutilizar_el_agregado (tests.test_consultas_cqrs.TestConsultarExpedienteClinico.test_la_vista_expone_autor_y_fecha_sin_reutilizar_el_agregado) ... ok
+test_hospitalizacion_la_inician_veterinario_o_personal_clinico (tests.test_permisos_por_rol.TestPermisosPorRol.test_hospitalizacion_la_inician_veterinario_o_personal_clinico) ... ok
+test_permiso_verificado_antes_de_transaccion (tests.test_permisos_por_rol.TestPermisosPorRol.test_permiso_verificado_antes_de_transaccion)
+ADR-04: verificar() es el primer paso; sin permiso no se abre transacción. ... ok
+test_recepcion_no_registra_nota_clinica (tests.test_permisos_por_rol.TestPermisosPorRol.test_recepcion_no_registra_nota_clinica)
+R-02, R-03: solo el Veterinario registra información clínica. ... ok
+test_recepcion_puede_solicitar_cita (tests.test_permisos_por_rol.TestPermisosPorRol.test_recepcion_puede_solicitar_cita)
+R-01: Recepción administra las citas. ... ok
+test_rol_no_permitido_rechaza_hospitalizacion (tests.test_permisos_por_rol.TestPermisosPorRol.test_rol_no_permitido_rechaza_hospitalizacion)
+R-04, R-09: Recepción y Propietario no inician hospitalizaciones. ... ok
+test_solo_el_veterinario_registra_vacunaciones (tests.test_permisos_por_rol.TestPermisosPorRol.test_solo_el_veterinario_registra_vacunaciones) ... ok
+test_toda_operacion_tiene_reglas_de_acceso_definidas (tests.test_permisos_por_rol.TestPermisosPorRol.test_toda_operacion_tiene_reglas_de_acceso_definidas) ... ok
+test_agendar_registra_el_evento_cita_agendada (tests.test_reglas_de_negocio.TestCitas.test_agendar_registra_el_evento_cita_agendada) ... ok
+test_cita_periodo_coherente_con_duracion (tests.test_reglas_de_negocio.TestCitas.test_cita_periodo_coherente_con_duracion)
+NB-06, NB-07, R-05: el periodo coincide con la duración del servicio. ... ok
+test_citas_de_otro_dia_no_bloquean_el_horario (tests.test_reglas_de_negocio.TestCitas.test_citas_de_otro_dia_no_bloquean_el_horario) ... ok
+test_horario_traslapado_rechazado (tests.test_reglas_de_negocio.TestCitas.test_horario_traslapado_rechazado)
+Q3, NB-07: no se agenda un horario que se traslape con otra cita del día. ... ok
+test_horarios_contiguos_no_se_consideran_traslape (tests.test_reglas_de_negocio.TestCitas.test_horarios_contiguos_no_se_consideran_traslape) ... ok
+test_servicio_requiere_duracion_positiva (tests.test_reglas_de_negocio.TestCitas.test_servicio_requiere_duracion_positiva) ... ok
+test_emergencia_requiere_motivo (tests.test_reglas_de_negocio.TestEmergencia.test_emergencia_requiere_motivo) ... ok
+test_emergencia_sin_cita_se_registra (tests.test_reglas_de_negocio.TestEmergencia.test_emergencia_sin_cita_se_registra)
+NB-19, R-06: la emergencia no exige cita ni, por ahora, mascota (P3). ... ok
+test_cada_nota_conserva_las_anteriores (tests.test_reglas_de_negocio.TestExpedienteClinico.test_cada_nota_conserva_las_anteriores) ... ok
+test_expediente_no_ofrece_operaciones_para_modificar_notas (tests.test_reglas_de_negocio.TestExpedienteClinico.test_expediente_no_ofrece_operaciones_para_modificar_notas)
+R-03 protegida por diseño: no existe forma de editar ni borrar una nota. ... ok
+test_nota_sin_autor_se_rechaza (tests.test_reglas_de_negocio.TestExpedienteClinico.test_nota_sin_autor_se_rechaza) ... ok
+test_veterinario_registra_nota_con_autor (tests.test_reglas_de_negocio.TestExpedienteClinico.test_veterinario_registra_nota_con_autor)
+NB-12, R-02: la nota queda a nombre del veterinario que la registra. ... ok
+test_el_seguimiento_solo_considera_la_vacuna_del_esquema (tests.test_reglas_de_negocio.TestVacunacion.test_el_seguimiento_solo_considera_la_vacuna_del_esquema) ... ok
+test_esquema_completo_no_genera_proxima_aplicacion (tests.test_reglas_de_negocio.TestVacunacion.test_esquema_completo_no_genera_proxima_aplicacion) ... ok
+test_refuerzo_identificado_con_esquema_valido (tests.test_reglas_de_negocio.TestVacunacion.test_refuerzo_identificado_con_esquema_valido)
+NB-16, R-13: con esquema validado se identifica el refuerzo. ... ok
+test_sin_esquema_validado_seguimiento_pendiente (tests.test_reglas_de_negocio.TestVacunacion.test_sin_esquema_validado_seguimiento_pendiente)
+R-12: sin esquema definido y validado no se calcula la próxima aplicación. ... ok
+test_emergencia_rechazada_por_rol_no_notifica (tests.test_transacciones_y_eventos.TestReaccionesYEventos.test_emergencia_rechazada_por_rol_no_notifica) ... ok
+test_los_eventos_se_devuelven_solo_si_la_operacion_se_completa (tests.test_transacciones_y_eventos.TestReaccionesYEventos.test_los_eventos_se_devuelven_solo_si_la_operacion_se_completa) ... ok
+test_notifica_veterinario_tras_confirmar (tests.test_transacciones_y_eventos.TestReaccionesYEventos.test_notifica_veterinario_tras_confirmar)
+CR-8: la notificación se solicita después de confirmar el registro. ... ok
+test_notificacion_no_disponible_deja_pendiente_sin_deshacer_el_registro (tests.test_transacciones_y_eventos.TestReaccionesYEventos.test_notificacion_no_disponible_deja_pendiente_sin_deshacer_el_registro) ... ok
+test_cada_caso_de_uso_modifica_un_solo_agregado (tests.test_transacciones_y_eventos.TestUnitOfWork.test_cada_caso_de_uso_modifica_un_solo_agregado) ... ok
+test_error_revierte_transaccion (tests.test_transacciones_y_eventos.TestUnitOfWork.test_error_revierte_transaccion)
+Ante cualquier error: revertir() deshace lo escrito y el error se propaga. ... ok
+test_exito_confirma_la_transaccion (tests.test_transacciones_y_eventos.TestUnitOfWork.test_exito_confirma_la_transaccion) ... ok
+test_la_transaccion_inicia_despues_de_autorizar (tests.test_transacciones_y_eventos.TestUnitOfWork.test_la_transaccion_inicia_despues_de_autorizar) ... ok
+
+----------------------------------------------------------------------
+Ran 60 tests in 0.021s
+
+OK
